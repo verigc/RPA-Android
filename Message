@@ -1,0 +1,15 @@
+adb shell settings put system accelerometer_rotation 0
+adb shell input keyevent KEYCODE_HOME
+adb shell am start -n com.whatsapp/.Main
+timeout 1
+adb shell input touchscreen tap 621 1185
+adb shell input touchscreen tap 590 115
+adb shell input touchscreen text "Barbara_Chile"
+adb shell input touchscreen tap 230 250
+adb shell input touchscreen text "Prueba"
+adb shell input touchscreen tap 660 640
+adb shell input keyevent KEYCODE_APP_SWITCH
+adb shell input keyevent KEYCODE_DPAD_DOWN
+adb shell input keyevent DEL
+adb shell input keyevent KEYCODE_HOME
+exit
